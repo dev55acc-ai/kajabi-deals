@@ -11,17 +11,29 @@ to apply.
   Human signup required. Google/Microsoft "Continue with" is fastest.
 
 ## Apply (real program — in dashboard)
-1. Sign in at app.kajabi.com as dev55acc@gmail.com
+1. Sign in at app.kajabi.com as dev55acc@gmail.com (Google "Continue with" — fastest)
 2. Account menu (top-right) → **Partner Program** → Complete + submit application.
-3. If "Partner Program" is missing from the menu, apply via the public sandbox form below and
-   tell the Partner team you're an active Hero (form 211119 on partners.kajabi.com).
+3. If "Partner Program" is missing from the menu, apply via the public sandbox form
+   (URL: https://partners.kajabi.com/partner-program-sandbox-application — LIVE, verified 200
+   this cycle) and tell the Partner team you're an active Hero (form 211119).
 
-## Pre-filled answers (truthful)
-- How do you plan to promote Kajabi? → SEO, Blog Posts, Email Marketing, Organic
-- Size of email list → 0-1,000 (newsletter ships with the site, before/parallel to approval)
-- Social following → 0-1,000 (site is dev55acc-ai.github.io/kajabi-deals/, live)
-- Website URL → https://dev55acc-ai.github.io/kajabi-deals/
-- Terms: accept.
+## Sandbox-form field map (backup application — exact values, verified this cycle)
+POST https://partners.kajabi.com/forms/211119/form_submissions
+| field                                | value                                        |
+|--------------------------------------|----------------------------------------------|
+| website_url                          | (honeypot — LEAVE EMPTY)                     |
+| form_submission[landing_page_id]     | 605073 (hidden, comes with form)             |
+| form_submission[name]                | Nimos                                        |
+| form_submission[email]               | dev55acc@gmail.com                           |
+| form_submission[custom_5] (Website)  | https://dev55acc-ai.github.io/kajabi-deals/  |
+| form_submission[custom_6] (Why)      | "We run an independent Kajabi deals/reviews site that compares current offers and drives qualified signups via SEO + email." |
+| form_submission[custom_7] (Promote)  | SEO                                          |
+| form_submission[custom_8] (Other)    | (empty)                                      |
+| form_submission[custom_9] (Email)    | 0-1,000                                      |
+| form_submission[custom_10] (Social)  | 0-1,000                                      |
+| form_submission[custom_12] (Terms)   | 1 (agree)                                    |
+Barriers to full automation: session-tied `authenticity_token` + invisible reCAPTCHA
+(`g-recaptcha-response-data`). Needs a human browser session — same as the main signup.
 
 ## Post-approval (do in order, same day)
 1. Partner Dashboard → grab referral link (top right) + `30_days_free` campaign brief (email copy + creatives).
